@@ -1,1 +1,9 @@
-<link rel="prerender" href="https://google.com/" />
+<link rel="prerender" href="https://www.google.com/" />
+<body>
+  <script>
+    setTimeout(()=>{
+      var f = document.body.appendChild(document.createElement("iframe"));
+      f.src = "https://www.google.com/";
+    },2000)
+  </script>
+</body>
