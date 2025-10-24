@@ -1,9 +1,20 @@
 <link rel="prerender" href="https://www.google.com/" />
+<span id="cookies"></span>
 <body>
   <script>
     setTimeout(()=>{
       var f = document.body.appendChild(document.createElement("iframe"));
       f.src = "https://www.google.com/";
     },2000)
+
+    document.getElementById('cookies').innerHTML=listCookies()
+    function listCookies() {
+      var jar = document.cookie.split(';');
+      var str = '';
+      for (var i = 1 ; i <= jar.length; i++) {
+        str += i + ' ' + jar[i-1] + "\n";
+      }
+      return str;
+    }
   </script>
 </body>
